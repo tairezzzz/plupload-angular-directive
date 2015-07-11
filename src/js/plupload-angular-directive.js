@@ -37,7 +37,8 @@ angular.module('plupload.directive', [])
 				'plFilesModel': '=',
 				'plFiltersModel': '=',
 				'plMultiParamsModel':'=',
-				'plInstance': '='
+				'plInstance': '=',
+                'plResizeModel':'='
 			},
 			link: function (scope, iElement, iAttrs) {
 
@@ -98,6 +99,10 @@ angular.module('plupload.directive', [])
 				if(scope.plMultiParamsModel){
 					options.multipart_params = scope.plMultiParamsModel;
 				}
+
+                if (scope.plResizeModel) {
+                    options.resize = scope.plResizeModel;
+                }
 
                 var initDelay = iAttrs.plInitDelay.toLowerCase() == 'true'?300:0
 
