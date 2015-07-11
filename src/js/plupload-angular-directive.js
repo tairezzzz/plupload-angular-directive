@@ -50,7 +50,7 @@ angular.module('plupload.directive', [])
 						randomString += charSet.substring(randomPoz,randomPoz+1);
 					}
 					return randomString;
-				}
+				};
 
 				if(!iAttrs.id){
 					var randomValue = scope.randomString(5);
@@ -93,7 +93,7 @@ angular.module('plupload.directive', [])
 						silverlight_xap_url : iAttrs.plSilverlightXapUrl,
 						filters : scope.filters,
 						drop_element: iAttrs.plDropElement
-				}
+				};
 
 
 				if(scope.plMultiParamsModel){
@@ -104,7 +104,7 @@ angular.module('plupload.directive', [])
                     options.resize = scope.plResizeModel;
                 }
 
-                var initDelay = iAttrs.plInitDelay.toLowerCase() == 'true'?300:0
+                var initDelay = iAttrs.plInitDelay.toLowerCase() == 'true'?300:0;
 
 				$timeout(function(){
                     var uploader = new plupload.Uploader(options);
