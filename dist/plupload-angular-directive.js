@@ -62,6 +62,9 @@ angular.module('plupload.directive', [])
 				if(!iAttrs.plMultiSelection){
 					iAttrs.$set('plMultiSelection','true');
 				}
+                if(!iAttrs.plInitDelay){
+                    iAttrs.$set('plInitDelay','false');
+                }
 				if(!iAttrs.plMaxFileSize){
 					iAttrs.$set('plMaxFileSize','10mb');
 				}
